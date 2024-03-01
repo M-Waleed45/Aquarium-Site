@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*-----Main Banner----->*/
+#front{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../Aquarium/img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#front h1{
+    font-size: 38px;
+    color: white;
+    margin: 109px 0 30px 0;
+}
+#front h2{
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    color: white;
+    margin: 0 0 20px 0;
+}
+/*--------navbar--------*/
+.container{
+    max-width: 100%;
+    padding: 0;
+}
+.navbar-nav a:hover{
+    color: rgb(49, 158, 217);
+}
+/*--------Daily Schedule/Dropdown--------*/
+#dropdown{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #6d747b;
+    padding: 2px 13px;
+    border: 5px;
+    border-radius: 26px;
+    /* margin: 1px 0 0 989px; */
+}
+#dropdown h2{
+    color: aliceblue;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 10px;
+    list-style-type: none;
+    margin: 0 0 0 -13px;
+    padding: 4px;
+}
+#dropdown:hover .dropdown-content{
+    display: block;
+}
+.day-heading{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.time-entry{
+    margin-left: 15px;
+}
+@media (max-width: 768px){
+    body{
+        font-size: 14px;
+    }
+}
+@media (max-width: 800px){
+    body{
+        font-size: 16px;
+    }
+}
+/*------------------------Event Box-------------------*/
+.items a{
+    color: black;
+}
+.box{
+    font-size: 18px;
+    margin: 0 0 0 25px;      /*auto - orignally*/
+    width: 70%;        /*90% - orignally*/
+}
+/*Styling for main heading*/
+.heading{
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+.items{
+    .item-link{
+        text-decoration: none;
+        /*Styling the title when it hovers over*/
+        &:hover{
+            .title{
+                h2{
+                    color: #3a67b5;
+                }
+            }
+        }
+    }
+}
+/*Styling for each item, basically the container of meta data*/
+.item{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    display: flex;
+    height: 160px;
+    margin-bottom: 32px;
+    transition: 0.2s ease-in-out;
+    width: 100%;
+
+    /*Hover on item*/
+    &:hover{
+        cursor: pointer;
+        transform: scaleX(1.01);
+    }
+    .image{
+        width: 300px;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+    /*Styling for Deatils of primary data*/
+    .detail{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 32px;
+        width: 100%;
+    }
+    .title{
+        h2{
+            font-size: 24px;
+            margin: 0 0 16px;
+        }
+        h3{
+            color: #000000;
+            font-size: 20px;
+            margin: 0;
+            font-weight: 400;
+        }
+        .location{
+            font-size: 20px;
+        }
+    }
+    /*styling meta data*/
+    .meta{
+        justify-content: flex-end;
+        text-align: right;
+        
+        .date{
+            font-size: 16px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+        .spots{
+            align-items: center;
+
+            .left{
+                color: #888;
+            }
+            .currency{
+                align-items: center;
+                background-color: #25a634;
+                border-radius: 100%;
+                color: #fff;
+                display: inline-flex;
+                font-size: 14px;
+                font-weight: 800;
+                justify-content: center;
+                margin-left: 8px;
+                width: 23px;
+            }
+        }
+    }
+}
+
+/*Animation for loading spinner*/
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
