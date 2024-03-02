@@ -82,8 +82,8 @@
 }
 .box{
     font-size: 18px;
-    margin: 0 0 0 25px;      /*auto - orignally*/
-    width: 70%;        /*90% - orignally*/
+    margin: auto;      /*0 0 0 25px - before*/
+    width: 90%;        /*70% - before*/
 }
 /*Styling for main heading*/
 .heading{
